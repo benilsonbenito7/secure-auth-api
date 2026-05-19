@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
+    'django_rest_passwordreset',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +83,7 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
 
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
     'BLACKLIST_AFTER_ROTATION': True,
 }
@@ -133,3 +134,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Email Configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'benilsonbenito12@gmail.com'
+EMAIL_HOST_PASSWORD = 'abzhpckgvsjprguq'
+DEFAULT_FROM_EMAIL = 'benilsonbenito12@gmail.com'
+
+# Frontend URL
+FRONTEND_URL = 'https://localhost:8443'
+
+# Redis Configuration
+REDIS_URL = 'redis://redis:6379'
+
+# Password Reset Token Expiration (in hours)
+PASSWORD_RESET_TIMEOUT = 1  # 1 hour

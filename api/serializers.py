@@ -28,3 +28,19 @@ class RegisterSerializer(serializers.ModelSerializer):
         v_dicionary.pop('password')
         
         return user
+
+
+class ChangePasswordSerializer(serializers.Serializer):
+    old_password = serializers.CharField(required=True)
+    new_password = serializers.CharField(required=True, validators=[validate_password])
+    new_password2 = serializers.CharField(required=True)
+    
+    def validate(self, data):
+        if data['old_password'] == data['new_password']:
+                raise serializers.ValidationError("The new password must be different from the old password.")
+        return data
+class UpdateProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'first_name', 'last_name']
+     

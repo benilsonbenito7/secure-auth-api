@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api',
+    'api.apps.ApiConfig',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'django_rest_passwordreset',
@@ -136,6 +136,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # Email Configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

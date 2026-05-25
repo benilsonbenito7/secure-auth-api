@@ -20,7 +20,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         v_dicionary.pop('password2')
         
         user = User.objects.create_user(
-            uswrname=v_dicionary['username'],
+            username=v_dicionary['username'],
             email=v_dicionary['email'],
             password=v_dicionary['password']
         )

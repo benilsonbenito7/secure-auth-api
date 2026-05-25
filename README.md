@@ -583,15 +583,11 @@ Este projecto é open-source e está disponível para uso pessoal e educacional.
 
 ## 👨‍💻 Autor
 
-Desenvolvido com ❤️ para segurança e autenticação robusta.
+Benilson Kanza Benito
 
 **Data:** 25 de Maio de 2026
 
 ---
-
-## 📞 Suporte
-
-Para dúvidas ou problemas, contacta o desenvolvedor ou abre um issue.
 
 ---
 
